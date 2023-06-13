@@ -1,0 +1,303 @@
+
+LAB08-PC05@DESKTOP-APGPPE4 MINGW64 ~/Desktop/git Examane/Examen (main)
+$ ls
+ Producciones/   README.md  'Recursos humanos'/   Ventas/
+
+LAB08-PC05@DESKTOP-APGPPE4 MINGW64 ~/Desktop/git Examane/Examen (main)
+$ git branch producion
+
+LAB08-PC05@DESKTOP-APGPPE4 MINGW64 ~/Desktop/git Examane/Examen (main)
+$ git branch ventas
+
+LAB08-PC05@DESKTOP-APGPPE4 MINGW64 ~/Desktop/git Examane/Examen (main)
+$ git branch recurso_humano
+
+LAB08-PC05@DESKTOP-APGPPE4 MINGW64 ~/Desktop/git Examane/Examen (main)
+$ git branch
+* main
+  producion
+  recurso_humano
+  ventas
+
+LAB08-PC05@DESKTOP-APGPPE4 MINGW64 ~/Desktop/git Examane/Examen (main)
+$ git checkout main
+Already on 'main'
+Your branch is up to date with 'origin/main'.
+
+LAB08-PC05@DESKTOP-APGPPE4 MINGW64 ~/Desktop/git Examane/Examen (main)
+$ git merge producion-a-unir
+merge: producion-a-unir - not something we can merge
+
+LAB08-PC05@DESKTOP-APGPPE4 MINGW64 ~/Desktop/git Examane/Examen (main)
+$ git merge producion
+Already up to date.
+
+LAB08-PC05@DESKTOP-APGPPE4 MINGW64 ~/Desktop/git Examane/Examen (main)
+$ git add .
+
+LAB08-PC05@DESKTOP-APGPPE4 MINGW64 ~/Desktop/git Examane/Examen (main)
+$ git commit - "se unieron las ramas"
+error: pathspec '-' did not match any file(s) known to git
+error: pathspec 'se unieron las ramas' did not match any file(s) known to git
+
+LAB08-PC05@DESKTOP-APGPPE4 MINGW64 ~/Desktop/git Examane/Examen (main)
+$ git commit -m "se unieron las ramas"
+[main bd93ed2] se unieron las ramas
+ 5 files changed, 10 insertions(+)
+ create mode 100644 Producciones/imagenproducto.png
+ create mode 100644 Producciones/materia prima.txt
+ create mode 100644 Producciones/productofinal.txt
+ create mode 100644 Recursos humanos/empleados.txt
+ create mode 100644 Ventas/tiendas.txt
+
+LAB08-PC05@DESKTOP-APGPPE4 MINGW64 ~/Desktop/git Examane/Examen (main)
+$ git push
+Enumerating objects: 10, done.
+Counting objects: 100% (10/10), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (9/9), 148.42 KiB | 24.74 MiB/s, done.
+Total 9 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/Samuuuuuuuuu8/Examen.git
+   40982a5..bd93ed2  main -> main
+
+LAB08-PC05@DESKTOP-APGPPE4 MINGW64 ~/Desktop/git Examane/Examen (main)
+$ git tag version1
+
+LAB08-PC05@DESKTOP-APGPPE4 MINGW64 ~/Desktop/git Examane/Examen (main)
+$ git tag
+version1
+
+LAB08-PC05@DESKTOP-APGPPE4 MINGW64 ~/Desktop/git Examane/Examen (main)
+$ git checkout recurso_humano
+error: Your local changes to the following files would be overwritten by checkout:
+        Recursos humanos/empleados.txt
+Please commit your changes or stash them before you switch branches.
+Aborting
+
+LAB08-PC05@DESKTOP-APGPPE4 MINGW64 ~/Desktop/git Examane/Examen (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   Recursos humanos/empleados.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+LAB08-PC05@DESKTOP-APGPPE4 MINGW64 ~/Desktop/git Examane/Examen (main)
+$ git log
+commit bd93ed249002089bac96da3e61e2cdbf85d3387c (HEAD -> main, tag: version1, origin/main, origin/HEAD)
+Author: LuisAdrian2 <tic-280007@utnay.edu.mx>
+Date:   Mon Jun 12 17:06:41 2023 -0700
+
+    se unieron las ramas
+
+commit 40982a5f33a70a29b3f667b5cfb50545beac6c93 (ventas, recurso_humano, producion)
+Author: Samuuuuuuuuu8 <135171963+Samuuuuuuuuu8@users.noreply.github.com>
+Date:   Mon Jun 12 16:29:14 2023 -0700
+
+    Initial commit
+
+LAB08-PC05@DESKTOP-APGPPE4 MINGW64 ~/Desktop/git Examane/Examen (main)
+$ git checkout recursos humanos
+error: pathspec 'recursos' did not match any file(s) known to git
+error: pathspec 'humanos' did not match any file(s) known to git
+
+LAB08-PC05@DESKTOP-APGPPE4 MINGW64 ~/Desktop/git Examane/Examen (main)
+$ git branch recurso_humano
+fatal: a branch named 'recurso_humano' already exists
+
+LAB08-PC05@DESKTOP-APGPPE4 MINGW64 ~/Desktop/git Examane/Examen (main)
+$ git branch recursos humanos
+fatal: not a valid object name: 'humanos'
+
+LAB08-PC05@DESKTOP-APGPPE4 MINGW64 ~/Desktop/git Examane/Examen (main)
+$ git branch  recurso_humano
+fatal: a branch named 'recurso_humano' already exists
+
+LAB08-PC05@DESKTOP-APGPPE4 MINGW64 ~/Desktop/git Examane/Examen (main)
+$ ^C
+
+LAB08-PC05@DESKTOP-APGPPE4 MINGW64 ~/Desktop/git Examane/Examen (main)
+$ git checkout recurso_humano
+error: Your local changes to the following files would be overwritten by checkout:
+        Recursos humanos/empleados.txt
+Please commit your changes or stash them before you switch branches.
+Aborting
+
+LAB08-PC05@DESKTOP-APGPPE4 MINGW64 ~/Desktop/git Examane/Examen (main)
+$ git branch recurso_humano
+fatal: a branch named 'recurso_humano' already exists
+
+LAB08-PC05@DESKTOP-APGPPE4 MINGW64 ~/Desktop/git Examane/Examen (main)
+$ git branch
+* main
+  producion
+  recurso_humano
+  ventas
+
+LAB08-PC05@DESKTOP-APGPPE4 MINGW64 ~/Desktop/git Examane/Examen (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   Recursos humanos/empleados.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+LAB08-PC05@DESKTOP-APGPPE4 MINGW64 ~/Desktop/git Examane/Examen (main)
+$ git commit -m "se agrego empleados a recursos humanos"
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   Recursos humanos/empleados.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+LAB08-PC05@DESKTOP-APGPPE4 MINGW64 ~/Desktop/git Examane/Examen (main)
+$ git add .
+
+LAB08-PC05@DESKTOP-APGPPE4 MINGW64 ~/Desktop/git Examane/Examen (main)
+$ git commit -m "se agrego empleados a recursos humanos"
+[main cb42d8d] se agrego empleados a recursos humanos
+ 1 file changed, 6 insertions(+)
+
+LAB08-PC05@DESKTOP-APGPPE4 MINGW64 ~/Desktop/git Examane/Examen (main)
+$ git push
+Enumerating objects: 7, done.
+Counting objects: 100% (7/7), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (4/4), 410 bytes | 410.00 KiB/s, done.
+Total 4 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/Samuuuuuuuuu8/Examen.git
+   bd93ed2..cb42d8d  main -> main
+
+LAB08-PC05@DESKTOP-APGPPE4 MINGW64 ~/Desktop/git Examane/Examen (main)
+$ git checkout recurso_humano
+Switched to branch 'recurso_humano'
+
+LAB08-PC05@DESKTOP-APGPPE4 MINGW64 ~/Desktop/git Examane/Examen (recurso_humano)
+$ git branch main
+fatal: a branch named 'main' already exists
+
+LAB08-PC05@DESKTOP-APGPPE4 MINGW64 ~/Desktop/git Examane/Examen (recurso_humano)
+$ git checkout main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+
+LAB08-PC05@DESKTOP-APGPPE4 MINGW64 ~/Desktop/git Examane/Examen (main)
+$ git branch recurso_humano
+fatal: a branch named 'recurso_humano' already exists
+
+LAB08-PC05@DESKTOP-APGPPE4 MINGW64 ~/Desktop/git Examane/Examen (main)
+$ git merge recurso_humano
+Already up to date.
+
+LAB08-PC05@DESKTOP-APGPPE4 MINGW64 ~/Desktop/git Examane/Examen (main)
+$ git tag version1.1
+
+LAB08-PC05@DESKTOP-APGPPE4 MINGW64 ~/Desktop/git Examane/Examen (main)
+$ git push
+Everything up-to-date
+
+LAB08-PC05@DESKTOP-APGPPE4 MINGW64 ~/Desktop/git Examane/Examen (main)
+$ git push
+Everything up-to-date
+
+LAB08-PC05@DESKTOP-APGPPE4 MINGW64 ~/Desktop/git Examane/Examen (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   Ventas/tiendas.txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        fotos_empleados/
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+LAB08-PC05@DESKTOP-APGPPE4 MINGW64 ~/Desktop/git Examane/Examen (main)
+$ git add .
+
+LAB08-PC05@DESKTOP-APGPPE4 MINGW64 ~/Desktop/git Examane/Examen (main)
+$ git commit -m "se agrego fotos empleados"
+[main 9777d59] se agrego fotos empleados
+ 6 files changed, 6 insertions(+), 1 deletion(-)
+ create mode 100644 fotos_empleados/empleado1.avif
+ create mode 100644 fotos_empleados/empleado2.jfif
+ create mode 100644 fotos_empleados/empleado3.jfif
+ create mode 100644 fotos_empleados/empleado4.jfif
+ create mode 100644 fotos_empleados/empleado5.avif
+
+LAB08-PC05@DESKTOP-APGPPE4 MINGW64 ~/Desktop/git Examane/Examen (main)
+$ git commit -m "se modifico ventas"
+On branch main
+Your branch is ahead of 'origin/main' by 1 commit.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+
+LAB08-PC05@DESKTOP-APGPPE4 MINGW64 ~/Desktop/git Examane/Examen (main)
+$ git push
+Enumerating objects: 13, done.
+Counting objects: 100% (13/13), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (9/9), done.
+Writing objects: 100% (10/10), 46.09 KiB | 23.04 MiB/s, done.
+Total 10 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/Samuuuuuuuuu8/Examen.git
+   cb42d8d..9777d59  main -> main
+
+LAB08-PC05@DESKTOP-APGPPE4 MINGW64 ~/Desktop/git Examane/Examen (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        Recursos humanos/sueldos.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+LAB08-PC05@DESKTOP-APGPPE4 MINGW64 ~/Desktop/git Examane/Examen (main)
+$ git add .
+
+LAB08-PC05@DESKTOP-APGPPE4 MINGW64 ~/Desktop/git Examane/Examen (main)
+$ git commit -m "se agregaron sueldos"
+[main 9bead1a] se agregaron sueldos
+ 1 file changed, 4 insertions(+)
+ create mode 100644 Recursos humanos/sueldos.txt
+
+LAB08-PC05@DESKTOP-APGPPE4 MINGW64 ~/Desktop/git Examane/Examen (main)
+$ git push
+Enumerating objects: 6, done.
+Counting objects: 100% (6/6), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (4/4), 404 bytes | 404.00 KiB/s, done.
+Total 4 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/Samuuuuuuuuu8/Examen.git
+   9777d59..9bead1a  main -> main
+
+LAB08-PC05@DESKTOP-APGPPE4 MINGW64 ~/Desktop/git Examane/Examen (main)
+$ ^C
+
+LAB08-PC05@DESKTOP-APGPPE4 MINGW64 ~/Desktop/git Examane/Examen (main)
+$
