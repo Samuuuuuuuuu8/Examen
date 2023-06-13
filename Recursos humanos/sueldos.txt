@@ -1,0 +1,4 @@
+Director: $7,000
+Maestro: $3,000
+Intendente: $1,000
+Tecnico:$5,000
